@@ -25,7 +25,7 @@ class Trainer {
       if (problem.check(userAnswer)) {
         this.tracker.registerCorrect();
         this.ui.logResult(
-          "Верно: " + problem.toString() + "  ответ: " + problem.answer,
+          "Correct: " + problem.toString() + "  answer: " + problem.answer,
           true,
         );
       } else {

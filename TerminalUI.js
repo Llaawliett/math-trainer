@@ -8,6 +8,16 @@ class TerminalUI {
     });
 
     this.screen.key(["C-c"], () => {
+      if (this.music) {
+        this.music.stop();
+      }
+      process.exit(0);
+    });
+
+    this.screen.program.key(["C-c"], () => {
+      if (this.music) {
+        this.music.stop();
+      }
       process.exit(0);
     });
   }
@@ -182,7 +192,7 @@ class TerminalUI {
       tags: true,
       content: "{center}{bold} MATH TRAINER {/bold}{/center}",
       style: {
-        fg: "white",
+        fg: "black",
         bg: "magenta",
       },
     });
@@ -255,7 +265,7 @@ class TerminalUI {
       height: 1,
       content: " Enter: send answer   |   Ctrl+C: quit",
       style: {
-        fg: "white",
+        fg: "black",
         bg: "magenta",
       },
     });
@@ -274,7 +284,7 @@ class TerminalUI {
     this.problemBox.setContent(
       "{bold}Question " +
         current +
-        " из " +
+        " of " +
         total +
         "{/bold}\n\n" +
         "{bold}{magenta-fg}" +
@@ -323,6 +333,14 @@ class TerminalUI {
 
       this.inputBox.once("submit", onSubmit);
       this.inputBox.focus();
+
+      this.inputBox.key(["C-c"], () => {
+        if (this.music) {
+          this.music.stop();
+        }
+        process.exit(0);
+      });
+
       this.inputBox.readInput();
       this.screen.render();
     });
