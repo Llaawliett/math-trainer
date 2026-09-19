@@ -1,0 +1,27 @@
+{
+  "name": "math-trainer",
+  "version": "1.0.0",
+  "description": "Math trainer in yazi style",
+  "main": "index.js",
+  "bin": {
+    "mathTrainer": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "math",
+    "trainer",
+    "cli",
+    "terminal"
+  ],
+  "author": "Cold code",
+  "license": "MIT",
+  "dependencies": {
+    "blessed": "^0.1.81"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ТВОЙ_GITHUB_USERNAME/math-trainer.git"
+  }
+}
