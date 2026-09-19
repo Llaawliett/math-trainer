@@ -4,6 +4,7 @@ a yazi-style terminal math simulator with panels, statistics, and answer history
 
 ## Install
 
+'''bash
 npm install -g git+https://github.com/Llaawliett/math-trainer.git
 
 ## Launch
